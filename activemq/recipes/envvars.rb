@@ -12,7 +12,7 @@ template "/etc/environment" do
 	owner "root"
 	group "root"
 	variables({
-		:environment_variables => node[:environment_variables]
+		:environment_variables => node[:deploy]['charging_module'][:environment_variables]
 	})
 end
 
