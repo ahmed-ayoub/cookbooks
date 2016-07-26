@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+default[:environment_variables]["NODE_ENV"] = "production"
 default['activemq']['mirror']  = 'https://repository.apache.org/content/repositories/releases/org/apache'
 default['activemq']['version'] = '5.12.0'
 default['activemq']['home'] = '/opt'
