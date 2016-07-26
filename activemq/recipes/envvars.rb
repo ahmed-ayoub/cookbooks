@@ -1,7 +1,7 @@
 Chef::Log.info("Setting environment variables")
 
 Chef::Log.info("Setting environment variables for current process")
-node[:environment_variables].each do |name, value|
+node[:deploy]['charging_module'][:environment_variables].each do |name, value|
 	ENV["#{name}"] = "#{value}"
 end
 
