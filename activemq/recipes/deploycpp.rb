@@ -12,4 +12,12 @@ node[:deploy].each do |application, deploy|
     deploy_data deploy
     app application
   end
+  
+  execute "cd /srv/www/smpp/current/SMPPServer ;  make" do
+    Chef::Log.info("Make SMPP Server")
+  end
+  
+  execute "sh run.sh ;  make" do
+    Chef::Log.info("Run SMPP Server")
+  end
 end
