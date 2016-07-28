@@ -17,7 +17,7 @@ node[:deploy].each do |application, deploy|
     Chef::Log.info("Make SMPP Server")
   end
   
-  execute "sh run.sh ;  make" do
+  execute "cd /srv/www/smpp/current/SMPPServer ; sh run.sh" do
     Chef::Log.info("Run SMPP Server")
   end
 end
