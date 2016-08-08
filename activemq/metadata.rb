@@ -11,8 +11,3 @@ recipe 'activemq::default', 'Installs Apache ActiveMQ and sets up the service us
 %w(ubuntu debian redhat centos suse scientific oracle amazon).each do |os|
   supports os
 end
-
-depends 'java', '~> 1.13'
-
-source_url 'https://github.com/chef-cookbooks/activemq' if respond_to?(:source_url)
-issues_url 'https://github.com/chef-cookbooks/activemq/issues' if respond_to?(:issues_url)

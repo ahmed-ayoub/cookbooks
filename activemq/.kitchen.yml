@@ -27,5 +27,3 @@ suites:
     attributes:
       activemq:
         use_default_config: true
-      java:
-        jdk_version: 8

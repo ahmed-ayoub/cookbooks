@@ -11,9 +11,6 @@ Installs Apache ActiveMQ and sets up the service using the included init script.
 ### Chef
 - Chef 11+
 
-### Cookbooks
-- java
-
 ## Attributes
 - `node['activemq']['mirror']` - download URL up to the activemq/apache-activemq directory.
 - `node['activemq']['version']` - version to install.
