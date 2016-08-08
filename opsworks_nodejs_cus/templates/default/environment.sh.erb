@@ -1,5 +1,0 @@
-#!/bin/sh
-
-<% node[:deploy]['charging_module'][:environment_variables].each do |name,value| -%>
-export <%= name %>=<%= value %>
-<% end -%>
