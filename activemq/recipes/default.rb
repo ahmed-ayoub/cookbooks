@@ -60,13 +60,6 @@ template "#{activemq_home}/conf/activemq.xml" do
   only_if  { node['activemq']['use_default_config'] }
 end
 
-ruby_block  "set-env-java-home" do
-  block do
-    ENV["JAVA_HOME"] = node['java']['java_home']
-  end
-  not_if { ENV["JAVA_HOME"] == node['java']['java_home'] }
-end
-
 directory "/etc/profile.d" do
   mode 00755
 end
